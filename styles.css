@@ -1,0 +1,211 @@
+@font-face {
+  font-family: squid;
+  src: url(GameOfSquids-1GMVL.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: squid;
+  overflow: hidden;
+  background: #fdde62;
+}
+
+.box {
+  width: 300px;
+  height: 450px;
+  display: -ms-grid;
+  display: grid;
+  background: #fdde62;
+  position: relative;
+  -webkit-box-shadow: 0px 0 4px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0 4px 0px rgba(0, 0, 0, 0.3);
+}
+
+.tag {
+  width: 100%;
+  height: 10%;
+  right: 0;
+  position: absolute;
+  background: chocolate;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #3c3c3c;
+}
+
+.tag:nth-of-type(1) {
+  top: 13px;
+  font-size: 2rem;
+  text-shadow: 1px 1px 1px #fdde62;
+  -webkit-transform: skewY(-5deg);
+          transform: skewY(-5deg);
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+}
+
+.tag:nth-of-type(2) {
+  bottom: 13px;
+  color: #fdde62;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 1px #671d28;
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+  -webkit-transform: skewY(5deg);
+          transform: skewY(5deg);
+}
+
+.squid {
+  width: 80%;
+  height: 60%;
+  position: relative;
+  place-self: center;
+  z-index: 2;
+}
+
+.squid__hood {
+  width: 80px;
+  height: 90px;
+  left: 50%;
+  top: 10px;
+  margin-left: -40px;
+  background: #e94d68;
+  position: absolute;
+  border-radius: 14em/20em 20em 5px 5px;
+}
+
+.squid__hood::before {
+  content: '';
+  width: 90%;
+  height: 105%;
+  background: #b63843;
+  left: 5%;
+  top: 15px;
+  border-radius: 15em/14em 13em 25em 25em;
+  z-index: 1;
+  position: absolute;
+}
+
+.squid__body {
+  width: 190px;
+  height: calc(100% - 90px);
+  left: 10%;
+  top: 80px;
+  position: relative;
+  z-index: 0;
+  background: #e94d68;
+  border-radius: 20em/20em 20em 5px 5px;
+  border-radius: 50%;
+}
+
+.squid__body::after {
+  content: '';
+  width: 10px;
+  height: 100%;
+  left: 48%;
+  background: #0a0a0a;
+  position: absolute;
+}
+
+.squid__body .fx {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border-radius: 50%;
+  bottom: 0;
+  background: transparent;
+  -webkit-box-shadow: 35px -10px 0 5px #fdde62, 45px -16px 0 10px #e94d68, 31px -22px 0 15px #fdde62, 130px -15px 0 5px #fdde62, 125px -20px 0 10px #e94d68, 138px -30px 0 15px #fdde62;
+          box-shadow: 35px -10px 0 5px #fdde62, 45px -16px 0 10px #e94d68, 31px -22px 0 15px #fdde62, 130px -15px 0 5px #fdde62, 125px -20px 0 10px #e94d68, 138px -30px 0 15px #fdde62;
+}
+
+.squid__body .fx::before, .squid__body .fx::after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border-radius: 50%;
+  background: #e94d68;
+}
+
+.squid__body .fx::before {
+  left: 34px;
+  top: -55%;
+}
+
+.squid__body .fx::after {
+  left: 135px;
+  top: -70%;
+}
+
+.squid__face {
+  width: 80%;
+  height: 90%;
+  background: #0a0a0a;
+  left: 10%;
+  top: 15px;
+  -webkit-box-shadow: 0px 1px 0px 1px #671d28;
+          box-shadow: 0px 1px 0px 1px #671d28;
+  border-radius: 15em/14em 13em 25em 25em;
+  z-index: 1;
+  position: absolute;
+  overflow: hidden;
+}
+
+.squid__mask {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: relative;
+  left: -29px;
+  top: -90%;
+  border: 5px solid #3c3c3c;
+}
+
+.squid__mask::after {
+  content: '';
+  width: 10px;
+  height: 100%;
+  top: 100%;
+  left: 46%;
+  -webkit-box-shadow: inset 0 0 0 3px #3c3c3c;
+          box-shadow: inset 0 0 0 3px #3c3c3c;
+  position: absolute;
+  z-index: 1;
+}
+
+.squid__mask::before {
+  content: '';
+  width: 35px;
+  height: 35px;
+  top: 65%;
+  border-radius: 50%;
+  left: 34.5%;
+  -webkit-box-shadow: inset 0 0 0 3px #fefefe;
+          box-shadow: inset 0 0 0 3px #fefefe;
+  position: absolute;
+  z-index: 1;
+}
+/*# sourceMappingURL=styles.css.map */
