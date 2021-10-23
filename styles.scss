@@ -21,6 +21,7 @@ body{
     width: 100vw;
     height: 100vh;
     font-family: squid;
+    flex-direction: column;
     overflow: hidden;
     background: $shade_one;
 }
