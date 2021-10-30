@@ -98,7 +98,6 @@ body{
         position: relative;
         z-index: 0;
         background: $red;
-        border-radius: 20em/20em 20em 5px 5px;
         border-radius: 50%;
         &::after{
             content: '';
